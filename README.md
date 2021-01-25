@@ -3,7 +3,9 @@ This is the code which I have written practising data structures in c++
 
 
 Day-1
+----------------------------
                                   *** part-1***
+------------------------------------
  1- half pattern in cpp of *
 
 ---------------------------------------------------------
