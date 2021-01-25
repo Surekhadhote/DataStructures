@@ -137,6 +137,11 @@ ARRAY ROTATIONS
 ------------------------
 
 1. Program for array rotation
+--
+Write a function rotate(ar[], d, n) that rotates arr[] of size n by d elements.
+[1,2,3,4,5]
+AFTER ROTATION BY 2
+[3,4,5,1,2]
  -----------------------------------------------------------------------------------------------------
 2. Reversal algorithm for array rotation
  -----------------------------------------------------------------------------------------------------
