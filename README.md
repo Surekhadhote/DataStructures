@@ -178,14 +178,113 @@ AFTER ROTATION BY 2
  
  
  
- DAY-3
- -------------------------------------------------
- STL
- -------------------------------------------
- ****algorithms****
+                                                                 DAY-3
+ ------------------------------------------------------------------------------------------------
+                                                                 STL
+ ----------------------------------------------------------------------------------------
+                                                                 ****algorithms****
+ 
+Sorting:
+--
+It is used for sorting an array syntax is sort [array_start_address,array_end_address) it is in header file <algorithm>
+  -------------
+  
+Searching:
+--
+It is binary search algorithm syntax is binary_search(startaddress,endaddress, valuetofind) it is in header file <algorithm>
+  ------------------------
+  
+Useful Array algorithms:
+--
+1. all_of():
+-
+This function operates on whole range of array elements and can save time to run a loop to check each elements one by one. It checks for a given property on every element and returns true when each element in range satisfies specified property, else returns false.
+-
+ all_of(ar, ar+6, [](int x) { return x>0; })? 
+          cout << "All are positive elements" : 
+          cout << "All are not positive elements"; 
+
+---
+2. any_of():
+-
+This function checks for a given range if there’s even one element satisfying a given property mentioned in function. Returns true if at least one element satisfies the property else returns false.
+-
+any_of(ar, ar+6, [](int x){ return x<0; })? 
+          cout << "There exists a negative element" : 
+          cout << "All are positive elements"; 
+
+
+---
+3. none_of():
+-
+This function returns true if none of elements satisfies the given condition else returns false.
+-
+ none_of(ar, ar+6, [](int x){ return x<0; })? 
+          cout << "No negative elements" : 
+          cout << "There are negative elements"; 
+
+-----
+4. copy_n():
+-
+copy_n() copies one array elements to new array. This type of copy creates a deep copy of array. This function takes 3 arguments, source array name, size of array and the target array name.
+-
+ // Using copy_n() to copy contents 
+    copy_n(ar, 6, ar1); 
+--
+5. iota():
+-
+This function is used to assign continuous values to array. This function accepts 3 arguments, the array name, size, and the starting number.
+---
+ // Using iota() to assign values 
+    iota(ar, ar+6, 20); 
+
+-----------------------------------------------------------------------------------
+Partition Operations:
+ --for containers--
+ 1. partition(beg, end, condition) :- This function is used to partition the elements on basis of condition mentioned in its arguments.
+ -
+ 2.  is_partitioned(beg, end, condition) :- This function returns boolean true if container is partitioned else returns false.
+ -
+ 3. stable_partition(beg, end, condition) :- This function is used to partition the elements on basis of condition mentioned in its arguments in such a way that the relative order of the elements is preserved.
+ -
+ 4. partition_point(beg, end, condition) :- This function returns an iterator pointing to the partition point of container i.e. the first element in the partitioned range [beg,end) for which condition is not true. The container should already be partitioned for this function to work.
+ -
+ 5. partition_copy(beg, end, beg1, beg2, condition) :- This function copies the partitioned elements in the differenet containers mentioned in its arguments. It takes 5 arguments. Beginning and ending position of container, beginning position of new container where elements have to be copied (elements returning true for condition), beginning position of new container where other elements have to be copied (elements returning false for condition) and the condition. Resizing new containers is necessary for this function.
+ -
+ ---------------------------------------------------------------------------------------------
+ 
+ valarray class:
+ -------------
+ 1. apply() :- This function applies the manipulation given in its arguments to all the valarray elements at once and returns a new valarray with manipulated values.
+----
+2. sum() :- This function returns the summation of all the elements of valarrays at once.
+ ---
+ 3. min() :- This function returns the smallest element of valarray.
+---
+4. max() :- This function returns the largest element of valarray.
+---
+5. shift() :- This function returns the new valarray after shifting elements by the number mentioned in its argument. If the number is positive, left-shift is applied, if number is negative, right-shift is applied.
+----
+6. cshift() :- This function returns the new valarray after circularly shifting(rotating) elements by the number mentioned in its argument. If the number is positive, left-circular shift is applied, if number is negative, right-circular shift is applied.
+
+----------------------------------------------------------------------------------
  --------------------------
- ****containers****
+                                                                  ****containers****
  --------------------------
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ -----------------------------------------------------------------------------------
  ****iterators****
  -------------------------
  ****functions****
