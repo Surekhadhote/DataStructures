@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+int main ()
+{
+    int num[10];
+    int i, j, desc,n;
+    cout<<"Enter n"<<endl;
+    cin>>n;
+    cout<<"\n Enter "<< n<<" Numbers : \n";
+    cout<<" ";
+    for (i = 0; i < n; ++i)
+    cin>>num[i];
+   
+    for (i = 0; i < n; ++i)   //  'for' loop is used for sorting the numbers in descending order
+    {
+        for (j = i + 1; j < n; ++j)
+        {
+            if (num[i] < num[j])
+            {
+                desc = num[i];
+                num[i] = num[j];
+                num[j] = desc;
+            }
+        }
+    }
+    cout<<"\n Numbers in Descending Order : \n";
+    for (i = 0; i < n; ++i)
+    {
+        cout<<" ";
+        cout<<num[i];
+        cout<<"\n";
+    }
+}
